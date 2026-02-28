@@ -16,7 +16,7 @@ Axum backend template with:
    ```
 2. Generate a new project:
    ```sh
-   cargo generate --git https://github.com/{{github_owner}}/{{project-name}}
+   cargo generate --git https://github.com/amazr/template-web-be-rs
    ```
 3. Enter the generated folder and run it:
    ```sh
