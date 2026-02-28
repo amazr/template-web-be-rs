@@ -1,0 +1,8 @@
+[template]
+cargo_generate_version = ">=0.23.0"
+ignore = ["target", "**/target", "**/target/**", "Cargo.lock"]
+
+[placeholders.github_owner]
+type = "string"
+prompt = "GitHub owner (user or org)"
+default = "my-org"

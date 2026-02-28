@@ -1,0 +1,33 @@
+[package]
+name = "{{project-name}}"
+version = "0.1.0"
+edition = "2024"
+repository = "https://github.com/{{github_owner}}/{{project-name}}"
+
+[workspace]
+members = [".", "migration", "api-error", "api-error-derive"]
+resolver = "2"
+
+[dependencies]
+api-error = { path = "api-error" }
+api-error-derive = { path = "api-error-derive" }
+axum = "0.8.8"
+derive_more = { version = "2.0.1", features = ["from"] }
+dotenvy = "0.15.7"
+envy = "0.4.2"
+migration = { path = "migration" }
+sea-orm = { version = "1.1.19", features = ["sqlx-sqlite", "sqlx-postgres", "runtime-tokio-rustls", "macros"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+tokio = { version = "1.49.0", features = ["full"] }
+tokio-util = "0.7.18"
+tower-http = { version = "0.6.8", features = ["trace", "catch-panic", "cors"] }
+tracing = "0.1.44"
+opentelemetry = "0.31.0"
+opentelemetry_sdk = "0.31.0"
+tracing-opentelemetry = "0.32.1"
+tracing-subscriber = { version = "0.3.20", features = ["env-filter"] }
+utoipa = { version = "5.4.0", features = ["axum_extras", "uuid"] }
+utoipa-axum = "0.2.0"
+utoipa-swagger-ui = { version = "9.0.2", features = ["axum"] }
+uuid = { version = "1.18.1", features = ["v4", "serde"] }
