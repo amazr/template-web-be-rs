@@ -21,6 +21,8 @@ Axum backend scaffold with:
 3. Open Swagger UI:
    - http://127.0.0.1:3000/swagger-ui
 
+Background tasks are registered in `src/main.rs` via `state.register_task(...)` before `start_tasks` is spawned.
+
 ## Project structure
 
 - `src/main.rs`: top-level orchestration
@@ -29,6 +31,7 @@ Axum backend scaffold with:
 - `src/store`: data access layer
 - `src/entities`: SeaORM entities
 - `src/errors.rs`: app error enum using `#[response(...)]`
+- `src/tasks`: structured background task trait + implementations
 - `migration`: SeaORM migration crate and CLI
 - `api-error`: shared `ErrorResponse` type
 - `api-error-derive`: `ApiError` derive macro

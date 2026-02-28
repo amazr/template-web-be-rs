@@ -7,6 +7,7 @@ Axum backend template with:
 - OpenTelemetry tracing setup
 - derive-driven API error mapping via `#[response(...)]`
 - bootstrap split into `app`/`database`/`observability`/`server` components
+- structured and instrumented background task framework
 
 ## Create a new project from this template
 
