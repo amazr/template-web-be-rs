@@ -2,6 +2,9 @@
 cargo_generate_version = ">=0.23.0"
 ignore = ["target", "**/target", "**/target/**", "Cargo.lock"]
 
+[hooks]
+post = ["hooks/post-readme-swap.rhai"]
+
 [placeholders.github_owner]
 type = "string"
 prompt = "GitHub owner (user or org)"
